@@ -26,3 +26,16 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+|
+*/
+Route::prefix('admin')->group(function (){
+
+    Route::get('/' , [\App\Http\Controllers\Admin\AdminDashboardController::class , 'index'])->name('admin.home');
+});
