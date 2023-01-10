@@ -263,13 +263,13 @@ button {
 }
 
 .sidebar-dropdown a::before,
-button::before {
+.sidebar-dropdown button::before {
     content: '»';
     margin: .8rem;
 }
 
 .sidebar-dropdown a:hover,
-button:hover {
+.sidebar-dropdown button:hover {
     color: #FE8A7D;
 }
 
