@@ -1,96 +1,80 @@
 @extends('admin.layouts.master')
 
 @section('head-tag')
-    <title>ادمین | برند</title>
+<title>برند</title>
 @endsection
 
 @section('content')
 
-    <nav class="font-size-12">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item" aria-current="page"> <a href="{{ route('admin.home') }}">خانه</a></li>
-            <li class="breadcrumb-item"> <a href="">بخش فروش</a></li>
-            <li class="breadcrumb-item active"> برند </li>
-        </ol>
-    </nav>
-
-     <section class="row">
-        <section class="col-12">
-            <section class="main-body-container">
-                <section class="main-body-container-header">
-                    <h5>
-                        برند
-                    </h5>
-                </section>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item font-size-12"> <a href="#">خانه</a></li>
+      <li class="breadcrumb-item font-size-12"> <a href="#">بخش فروش</a></li>
+      <li class="breadcrumb-item font-size-12 active" aria-current="page">برند ها</li>
+    </ol>
+  </nav>
 
 
-                <section class="d-flex justify-content-between align-items-center py-4 border-bottom">
-                    <a class="btn btn-info btn-sm" href="{{route('admin.market.brand.create')}}">ایجاد برند</a>
-                    <div class="max-width-16-rem">
-                        <input class="form-control form-control-sm" type="text" placeholder="جستجو">
-                    </div>
-                </section>
-                
-                <section class="table-response">
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>نام برند</th>
-                                <th>لوگو</th>
-                                <th class="max-width-16-rem text-center px-5"> تنظیمات <i class="fa fa-cogs"></i></th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <th>1</th>
-                                <td>مانیتور</td>
-                                <td><img class="width-2-rem rounded" src="{{asset('assets/images/avatar-2.jpg')}}" alt=""></td>
-                                <td class="width-16-rem">
-                                    <section class="d-flex justify-content-end">        
-                                        <a class="btn-primary btn-sm" href=""><i class="fa fa-edit"></i> ویرایش </a>
-                                        <form action="" method="post">
-                                            <button class="btn btn-danger btn-sm mx-1" type="submit"><i class="fa fa-trash-alt"></i> حذف </button>
-                                        </form>
-                                    </section>
-                                </td>
-                            </tr>
-
-                             <tr>
-                                <th>1</th>
-                                <td>مانیتور</td>
-                                <td><img class="width-2-rem rounded" src="{{asset('assets/images/avatar-2.jpg')}}" alt=""></td>
-                                <td class="width-16-rem">
-                                    <section class="d-flex justify-content-end">        
-                                        <a class="btn-primary btn-sm" href=""><i class="fa fa-edit"></i> ویرایش </a>
-                                        <form action="" method="post">
-                                            <button class="btn btn-danger btn-sm mx-1" type="submit"><i class="fa fa-trash-alt"></i> حذف </button>
-                                        </form>
-                                    </section>
-                                </td>
-                            </tr>
-
-                             <tr>
-                                <th>1</th>
-                                <td>مانیتور</td>
-                                <td><img class="width-2-rem rounded" src="{{asset('assets/images/avatar-2.jpg')}}" alt=""></td>
-                                <td class="width-16-rem">
-                                    <section class="d-flex justify-content-end">        
-                                        <a class="btn-primary btn-sm" href=""><i class="fa fa-edit"></i> ویرایش </a>
-                                        <form action="" method="post">
-                                            <button class="btn btn-danger btn-sm mx-1" type="submit"><i class="fa fa-trash-alt"></i> حذف </button>
-                                        </form>
-                                    </section>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </section>
-
-
+  <section class="row">
+    <section class="col-12">
+        <section class="main-body-container">
+            <section class="main-body-container-header">
+                <h5>
+                 برند ها
+                </h5>
             </section>
+
+            <section class="d-flex justify-content-between align-items-center mt-4 mb-3 border-bottom pb-2">
+                <a href="{{ route('admin.market.brand.create') }}" class="btn btn-info btn-sm">ایجاد برند </a>
+                <div class="max-width-16-rem">
+                    <input type="text" class="form-control form-control-sm form-text" placeholder="جستجو">
+                </div>
+            </section>
+
+            <section class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>نام برند</th>
+                            <th>لوگو</th>
+                            <th class="max-width-16-rem text-center"><i class="fa fa-cogs"></i> تنظیمات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>نمایشگر	</td>
+                            <td><img src="{{ asset('admin-assets/images/avatar-2.jpg') }}"  alt="" class="max-height-2rem"></td>
+                            <td class="width-16-rem text-left">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویرایش</a>
+                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>نمایشگر	</td>
+                            <td><img src="{{ asset('admin-assets/images/avatar-2.jpg') }}"  alt="" class="max-height-2rem"></td>
+                            <td class="width-16-rem text-left">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویرایش</a>
+                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>نمایشگر	</td>
+                            <td><img src="{{ asset('admin-assets/images/avatar-2.jpg') }}"  alt="" class="max-height-2rem"></td>
+                            <td class="width-16-rem text-left">
+                                <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> ویرایش</a>
+                                <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash-alt"></i> حذف</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
         </section>
     </section>
+</section>
 
 @endsection
